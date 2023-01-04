@@ -1,0 +1,7 @@
+
+.col-md-3 {
+    overflow-y: scroll;
+    height: 60vh;
+    padding-bottom: 20px;
+    margin-bottom: 2rem;
+}
