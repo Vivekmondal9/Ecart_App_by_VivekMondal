@@ -4,6 +4,7 @@ import Login from "../Login/Login";
 import Register from "../Login/Register";
 
 import "./Header.css";
+import "../Products/Product.css";
 
 
 
@@ -24,7 +25,7 @@ function Header(props) {
 
     function logpageopen() {
         let llg = document.querySelector(".loginsec");
-        if (llg.innerHTML === "Login") {
+        if (llg.innerHTML == "Login") {
 
             let rw = document.querySelector(".row");
             // let ctrw = document.querySelector(".cart-row");
@@ -57,7 +58,7 @@ function Header(props) {
     }
     function register() {
         let llg = document.querySelector(".registersec");
-        if (llg.innerHTML === "Register") {
+        if (llg.innerHTML == "Register") {
 
             let rw = document.querySelector(".row");
             // let ctrw = document.querySelector(".cart-row");
@@ -73,8 +74,8 @@ function Header(props) {
     }
 
     return (
-        <nav className="navbar navbar-expand-lg bg-dark header">
-            <div className="container-fluid">
+        <nav className="header">
+            <div className="main-header" >
                 <div className="leftHeader">
                     <a className="navbar-brand header-name" href="/">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-cart" viewBox="0 0 16 16">

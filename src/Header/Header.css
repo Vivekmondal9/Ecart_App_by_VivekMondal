@@ -1,5 +1,15 @@
-.header {
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: black;
+}
+.main-header {
+    display: flex;
+    flex-direction: row;
     padding: 10px;
+    width: 100vw;
+    justify-content: space-between;
 }
 
 .header-name {
@@ -59,6 +69,7 @@
 }
 
 .cartButton {
+    font-size: 20px;
     color: black;
     text-decoration: none;
 }
@@ -95,25 +106,17 @@
     gap: 10px;
 
 }
-
-
-
-.label {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-size: 4vh;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.inputclass {
+.loggedOut{
+    background-color: darkcyan;
     border: none;
-    height: 4.5vh;
-    width: 25vw;
-    text-align: center;
-    box-shadow: 2px 2px 8px black;
-
+    border-radius: 5px;
+   
 }
+
+
+
+
+
 
 #loginbtn {
     width: 10vw;
@@ -130,7 +133,7 @@
     position: absolute;
     top: 3px;
     right: 15px;
-    font-size: 40px;
+    font-size: 1.5em;
 
 
 }
@@ -146,3 +149,27 @@
 .cart-loginsec {
     color: white;
 }
+
+@media only screen and(max-width:800px){
+
+    .header{
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .right-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+

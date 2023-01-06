@@ -29,7 +29,7 @@ function Login() {
         let lgs = document.querySelector(".loginsec");
         let logout=document.querySelector(".loggedOut");
 
-        if (userName === "vivekmondal9@gmail.com" && password === "21111995") {
+        if (userName == "vivekmondal9@gmail.com" && password == "21111995") {
             console.log("Login Successful")
             let nm = userLogin.userName;
             lgs.innerText = nm;

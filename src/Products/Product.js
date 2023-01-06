@@ -20,13 +20,13 @@ function Products(props) {
         let flag = 0;
 
         for (let i = 0; i < cartIt.length; i++) {
-            if (JSON.stringify(product.id) === cartIt[i].id) {
+            if (JSON.stringify(product.id) == cartIt[i].id) {
                 flag = 1;
                 cartIt[i].QTY = cartIt[i].QTY + 1;
             }
         }
 
-        if (flag === 0) {
+        if (flag == 0) {
             let record = JSON.stringify(product).substring(0, JSON.stringify(product).length - 1) + ",\"QTY\":1}"
             let recordCartFormat = JSON.parse(record)
             cartIt.push(recordCartFormat);
@@ -39,9 +39,9 @@ function Products(props) {
     }
 
     return (
-        <div>
+        <div className="cdm">
             <div className="card-main">
-                <h5>{product.title}</h5>
+                <h5 className="product-title">{product.title}</h5>
                 <hr></hr>
                 <img src={product.image} className="card-img-top" alt="LoadImage"></img>
                 <div className="card-body">

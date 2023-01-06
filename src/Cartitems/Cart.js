@@ -16,7 +16,7 @@ function Cart(props) {
   function DeleteFromCart(e) {
     let index = 0;
     for (let i = 0; i < cartt.length; i++) {
-      if (JSON.stringify(cartt[i].id) === e.target.id) {
+      if (JSON.stringify(cartt[i].id) == e.target.id) {
         console.log(JSON.stringify(cartt[i].id));
         console.log(e.target.id);
         index = i;
@@ -54,7 +54,7 @@ if(cartt){
   
   function reduceItem(e) {
     for (let i = 0; i < cartt.length; i++) {
-      if (JSON.stringify(cartt[i].id) === e.target.id) {
+      if (JSON.stringify(cartt[i].id) == e.target.id) {
         cartt[i].QTY -= 1;
 
         localStorage.setItem("cartItems", JSON.stringify(cartt))
@@ -70,7 +70,7 @@ if(cartt){
 
 
     for (let i = 0; i < cartt.length; i++) {
-      if (JSON.stringify(cartt[i].id) === e.target.id) {
+      if (JSON.stringify(cartt[i].id) == e.target.id) {
         cartt[i].QTY += 1;
 
         localStorage.setItem("cartItems", JSON.stringify(cartt))
@@ -98,7 +98,7 @@ if(cartt){
             <h5 className="card-title">{p.title}</h5>
             <hr></hr>
             <img src={p.image} className="card-img-top" alt="..."></img>
-            <div className="card-body">
+            <div className="card-body body-cart">
               <h6 className="price-tag">₹ {p.price}</h6>
               <p className="card-text cartdes">
                 {p.description}
